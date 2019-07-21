@@ -3,4 +3,7 @@ some_function = ->
 
 $ ->
   $('#myButton').click ->
-    $('.container').toggle()
+   $.ajax
+     type: 'POST'
+     url: '/guides'
+     data: "guide[title]=Hey from coffeescript!"
